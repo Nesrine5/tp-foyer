@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class FoyerServiceImplMockTestt {
+public class FoyerServiceImplMockTest {
 
     @InjectMocks
     private FoyerServiceImpl foyerService; // Service to be tested
