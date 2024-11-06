@@ -1,4 +1,4 @@
-package tn.esprit.tpfoyer.service;
+package tn.esprit.tpfoyer;
 
 import tn.esprit.tpfoyer.entity.Bloc;
 
