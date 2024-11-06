@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.tpfoyer.entity.Reservation;
-import tn.esprit.tpfoyer.service.IReservationService;
+import tn.esprit.tpfoyer.IReservationService;
 
 import java.util.Date;
 import java.util.List;

@@ -3,7 +3,7 @@ package tn.esprit.tpfoyer.control;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.tpfoyer.entity.Universite;
-import tn.esprit.tpfoyer.service.IUniversiteService;
+import tn.esprit.tpfoyer.IUniversiteService;
 
 import java.util.List;
 
