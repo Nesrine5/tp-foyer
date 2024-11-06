@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  tp-foyer:
+    image: nesine/tp-foyer:5.0.0   # Update with your image tag
+    build:
+      context: .                          # Context for building the image
+      dockerfile: Dockerfile               # Specify the Dockerfile if it's named differently
+    ports:
+      - "8089:8089"                        # Port redirection
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true # DB URL for Spring Boot
+      SPRING_DATASOURCE_USERNAME: root     # MySQL user
+      SPRING_DATASOURCE_PASSWORD: rootpassword # MySQL root password
+    depends_on:
+      - db                                  # Ensure the database is ready before the application starts
+
+  db:
+    image: mysql:5.7                       # MySQL image
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword     # MySQL root password
+      MYSQL_DATABASE: db           # Database to create
+    ports:
+      - "3306:3306"                         # Port redirection for MySQL
+
+networks:
+  default:
+    driver: bridge
